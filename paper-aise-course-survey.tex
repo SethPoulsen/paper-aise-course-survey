@@ -1,0 +1,222 @@
+\documentclass[sigconf]{acmart}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+
+%% These commands are for a JOURNAL article.
+\acmJournal{JDS}
+\acmVolume{37}
+\acmNumber{4}
+\acmArticle{111}
+\acmMonth{8}
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{A Survey of Student Sentiments on AI-Assisted Software Engineering Courses}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+
+\author{Skyler Oakeson}
+\affiliation{%
+	\institution{Utah State University}
+	\city{Logan}
+	\state{UT}
+	\country{USA}}
+\email{skyler.oakeson@usu.edu}
+
+\author{Seth Poulsen}
+\affiliation{%
+	\institution{Utah State University}
+	\city{Logan}
+	\state{UT}
+	\country{USA}}
+\email{seth.poulsen@usu.edu}
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Oakeson et al.}
+%%
+%% Article type: Research, Review, Discussion, Invited or Position
+\acmArticleType{Research}
+
+%% Authors' contribution
+\acmContributions{BT and GKMT designed the study; LT, VB, and AP
+	conducted the experiments, BR, HC, CP and JS analyzed the results,
+	JPK developed analytical predictions, all authors participated in
+	writing the manuscript.}
+
+\keywords{Do, Not, Use, This, Code, Put, the, Correct, Terms, for,
+	Your, Paper}
+
+\begin{abstract}
+	This is a paper
+\end{abstract}
+
+\maketitle
+
+
+\section{Introduction}
+
+In this document we discuss how to write an ACM article.
+
+\section{Related Work}
+
+Research on generative AI (GenAI) in programming and software engineering
+education has grown quickly, and can be organized into three broad strands that
+motivate the present survey: (1) how courses and curricula are being redesigned
+around AI-assisted development, (2) how students perceive, use, and feel about
+AI tools while learning to program, and (3) how these perceptions relate to
+measurable outcomes such as performance, self-efficacy, and skill development.
+
+\subsection{Redesigning Courses and Curricula for AI-Assisted Development}
+
+As generative AI coding tools have become embedded in professional software
+development, universities have begun to design dedicated courses and to rework
+existing ones around AI-assisted workflows. Geng et al.~\cite{geng2026mapping}
+analyzed the syllabi and course materials of 23 U.S. upper-division,
+credit-bearing courses that explicitly frame generative AI as part of software
+engineering, characterizing their learning objectives, assessment methods,
+topics, and the AI tools they document, in order to map how this emerging
+curricular area is currently being defined. Complementing this curriculum-level
+view, B\"ottcher et al.~\cite{bottcher2025concepts} argue that because students
+already use generative AI tools regardless of instructor attitudes toward them,
+educators need to explicitly incorporate systematic and professional AI-tool
+use into teaching and learning, which requires rethinking constructive
+alignment---that is, the fit between learning objectives, teaching and learning
+activities, and assessments---for introductory software development courses.
+Related work in this space has examined how instructors integrate AI tools into
+programming and software engineering curricula more broadly, including concerns
+about maintaining core competencies such as debugging, algorithmic thinking,
+and independent problem-solving alongside AI-assisted
+instruction~\cite{kohenvacs2025integrating}.
+
+\subsection{Student Perceptions and Patterns of AI Use in Programming Courses}
+
+A second strand of work surveys or otherwise elicits how students themselves
+perceive and use AI tools once they are integrated into programming
+instruction. Kohen-Vacs, Usher, and Jansen~\cite{kohenvacs2025integrating}
+surveyed undergraduate students on the usefulness of GenAI tools for
+coursework, their potential to enhance creativity, students' behavioral
+intention to continue using them, and associated concerns; students reported
+generally favorable, medium-to-high perceptions of usefulness and creativity
+support and strong intentions to keep using GenAI tools, while expressing
+comparatively modest concerns centered mainly on the risk of over-reliance. In
+a complementary study conducted within introductory programming labs, G\"uner
+and Er~\cite{guner2025classroom} identified five distinct profiles of
+student--AI interaction---ranging from AI-reliant code generation to more
+independent or collaborative styles---and showed that these profiles shifted
+substantially once students received explicit training in prompting and were
+given example prompts, with better-performing profiles becoming more common as
+guidance increased. This finding echoes a broader theme in the literature that
+unguided or unstructured use of GenAI tools can be less beneficial than guided,
+scaffolded use, a pattern also reported for structured prompt training in
+engineering and data-analysis courses.
+
+ther work has probed student sentiment through more targeted or qualitative
+instruments. P\u{a}durean et al.~\cite{padurean2026understanding}, studying
+more than 900 CS1 students attempting dialogue-based ``Prompt
+Problems''---exercises in which students write natural-language prompts for a
+code-generating model rather than code itself---found that students generally
+rated prompting as easier and more enjoyable than traditional coding tasks and
+perceived it as well suited to developing problem-solving skills, while also
+cataloguing the specific prompt-level mistakes (chiefly omission of key
+details) that led to unsuccessful attempts. Thorgeirsson, Weidmann, and
+Su~\cite{thorgeirsson2026computer} took a related but distinct angle, running
+a controlled, preregistered study of ``vibe coding''---programming purely
+through natural-language prompting and observed behavior, without viewing the
+underlying code---and found that both written-communication skill and
+computer-science achievement independently and significantly predicted
+vibe-coding performance, with prompt quality mediating much of the association
+between writing skill and outcomes.
+
+\subsection{Linking Student Attitudes to Performance and Self-Efficacy}
+
+A third strand connects student sentiment more directly to measured outcomes.
+Prather et al.~\cite{prather2026validated} developed and validated a
+self-efficacy scale for programming with generative AI, adapting the
+established Steinhorst self-efficacy subscales (covering tracing, patterns,
+problem solving, and control) to a GenAI-forward introductory computing
+context, and found that these foundational constructs remained reliable even
+when the surrounding curriculum incorporated AI tools throughout. Kohen-Vacs,
+Usher, and Jansen~\cite{kohenvacs2025integrating} additionally examined
+students' technical performance on a task requiring them to correct flawed,
+LLM-generated code during exams, finding that students performed significantly
+worse on these debugging tasks than on comparable instructor-designed
+programming and theoretical exam components---a gap that surfaced despite
+students' generally positive stated attitudes toward GenAI tools, underscoring
+a divergence between favorable sentiment and demonstrated competence in
+critically evaluating AI output. Taken together with the profile- and
+performance-linked findings of G\"uner and Er~\cite{guner2025classroom}, this
+body of work suggests that student sentiment toward AI-assisted instruction
+cannot be assumed to track straightforwardly with learning gains, motivating
+survey instruments---like the one used in the present study---that probe
+sentiment as a construct distinct from, but related to, performance and
+self-efficacy.
+
+\subsection{Positioning of the Present Study}
+
+Existing research thus offers converging evidence that (a) AI-assisted software
+development courses are a newly forming and heterogeneous curricular category,
+(b) students hold generally favorable but multidimensional attitudes toward AI
+tools that vary with prior instruction, guidance, and prompting skill, and (c)
+these attitudes are only loosely coupled with objective performance on
+AI-related tasks. However, much of this work either surveys perceptions in a
+single course or intervention, or infers sentiment indirectly from interaction
+logs and performance data rather than through validated, retrospective
+self-report instruments aimed specifically at students who have completed a
+full AI-assisted software development course. The present study addresses this
+gap by directly surveying students who have been enrolled in such courses about
+their sentiments toward the experience, complementing the curriculum-mapping,
+interaction-profiling, and performance-linked perspectives established in prior
+work.
+
+
+\section{Methods}
+
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}
+\endinput
